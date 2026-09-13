@@ -10,25 +10,25 @@ This repository is **supporting research material**. It is not the normative JEP
 
 Current public version line:
 
-| Layer | Current Version | Repository |
-|---|---|---|
-| JEP | v0.6 | https://github.com/hjs-spec/jep-v06 |
-| JEP API | v0.6 | https://github.com/hjs-spec/jep-api |
-| HJS | v0.5 | https://github.com/hjs-spec/hjs-05 |
-| JAC | v0.5 | https://github.com/hjs-spec/jac-agent-02 |
+| Layer   | Current Version | Repository                                               |
+| ------- | --------------- | -------------------------------------------------------- |
+| JEP     | v0.6            | [jep-v06](https://github.com/hjs-spec/jep-v06)           |
+| JEP API | v0.6            | [jep-api](https://github.com/hjs-spec/jep-api)           |
+| HJS     | v0.5            | [hjs-05](https://github.com/hjs-spec/hjs-05)             |
+| JAC     | v0.5            | [jac-agent-02](https://github.com/hjs-spec/jac-agent-02) |
 
 Public drafts:
 
-- JEP-Core: https://datatracker.ietf.org/doc/draft-wang-jep-judgment-event-protocol/
-- JEP-Profiles: https://datatracker.ietf.org/doc/draft-wang-jep-profiles/
-- JEP-Conformance: https://datatracker.ietf.org/doc/draft-wang-jep-conformance/
-- HJS: https://datatracker.ietf.org/doc/draft-wang-hjs-accountability/
-- JAC: https://datatracker.ietf.org/doc/draft-wang-jac/
+* [JEP-Core](https://datatracker.ietf.org/doc/draft-wang-jep-judgment-event-protocol/)
+* [JEP-Profiles](https://datatracker.ietf.org/doc/draft-wang-jep-profiles/)
+* [JEP-Conformance](https://datatracker.ietf.org/doc/draft-wang-jep-conformance/)
+* [HJS](https://datatracker.ietf.org/doc/draft-wang-hjs-accountability/)
+* [JAC](https://datatracker.ietf.org/doc/draft-wang-jac/)
 
 Public resources:
 
-- JEP v0.6 Spec Demo: https://huggingface.co/spaces/yuqiangJEP/jep-v06-spec-demo/tree/main
-- JEP v0.6 Conformance Suite: https://huggingface.co/datasets/yuqiangJEP/jep-v06-conformance-suite
+* [JEP v0.6 Spec Demo](https://huggingface.co/spaces/yuqiangJEP/jep-v06-spec-demo/tree/main)
+* [JEP v0.6 Conformance Suite](https://huggingface.co/datasets/yuqiangJEP/jep-v06-conformance-suite)
 
 ---
 
@@ -36,19 +36,19 @@ Public resources:
 
 This repository contains:
 
-- research papers related to judgment events, accountability receipts, and causal observability;
-- an exploratory scenario corpus for evaluating J/D/T/V primitive coverage;
-- supporting documentation for corpus interpretation and version relationships.
+* research papers related to judgment events, accountability receipts, and causal observability;
+* an exploratory scenario corpus for evaluating J/D/T/V primitive coverage;
+* supporting documentation for corpus interpretation and version relationships.
 
 This repository does **not** define:
 
-- JEP-Core semantics;
-- HJS receipt semantics;
-- JAC chain semantics;
-- conformance requirements;
-- legal liability;
-- factual truth;
-- governance or regulatory conclusions.
+* JEP-Core semantics;
+* HJS receipt semantics;
+* JAC chain semantics;
+* conformance requirements;
+* legal liability;
+* factual truth;
+* governance or regulatory conclusions.
 
 ---
 
@@ -75,29 +75,39 @@ README.md
 
 ## Papers
 
-### Causal Observability Paper
+### Target Determinability under Partial Causal Observation
 
-```text
-papers/causal-observability-paper.pdf
-```
+**A Faithful Reduction Framework — Revision 01**
 
-Explores how declared dependency structures, observability limits, and event chains relate to accountability infrastructure.
+Studies when available observations determine a target and what additional information is needed to resolve target-relevant ambiguity.
 
-### Four Primitives Paper
+[Read Revision 01 on Zenodo](https://zenodo.org/records/22673663)
 
-```text
-papers/four-primitives-paper.pdf
-```
+[Repository PDF](papers/causal-observability-paper.pdf)
 
-Explores the four-event primitive model around Judgment, Delegation, Termination, and Verification.
+### Judgment, Delegation, Termination, Verification
+
+**Toward a Minimal Accountability Grammar for Human-AI Agent Decision Chains — Revision 01**
+
+Proposes a candidate vocabulary for recording judgment, delegation, termination, and verification events. Expressive adequacy and conditional minimality remain research hypotheses.
+
+Recording authorization or termination does not itself enforce the corresponding action. Verification establishes the results of specified checks, not external truth or legal liability.
+
+[Read Revision 01 on Zenodo](https://zenodo.org/records/22716894)
+
+[Repository PDF](papers/four-primitives-paper.pdf)
+
+### Version Guidance
+
+The Zenodo links above identify specific revised editions. Repository PDF filenames do not establish their revision; check the version printed inside each document before citing it.
+
+These papers provide research context. Current protocol requirements are defined by the normative drafts linked above.
 
 ---
 
 ## Scenario Corpus
 
-```text
-corpus/jep_scenario_corpus_v01.json
-```
+[Browse the scenario corpus](corpus/jep_scenario_corpus_v01.json)
 
 The corpus is an exploratory scenario set for evaluating whether J/D/T/V primitives can describe common decision, delegation, verification, termination, and accountability situations.
 
@@ -110,11 +120,7 @@ non-normative
 not a conformance suite
 ```
 
-For interpretation guidance, see:
-
-```text
-docs/CORPUS-CODING-GUIDE.md
-```
+For interpretation guidance, see the [Corpus Coding Guide](docs/CORPUS-CODING-GUIDE.md).
 
 ---
 
@@ -122,25 +128,27 @@ docs/CORPUS-CODING-GUIDE.md
 
 This repository is **not** the official conformance suite.
 
-The public JEP v0.6 conformance dataset is maintained here:
+The public dataset is maintained separately:
 
-https://huggingface.co/datasets/yuqiangJEP/jep-v06-conformance-suite
+[JEP v0.6 Conformance Suite](https://huggingface.co/datasets/yuqiangJEP/jep-v06-conformance-suite)
 
 Use that dataset for:
 
-- schemas;
-- signed vectors;
-- invalid cases;
-- canonicalization fixtures;
-- profile examples;
-- validation metadata.
+* schemas;
+* signed vectors;
+* invalid cases;
+* canonicalization fixtures;
+* profile examples;
+* validation metadata.
 
 Use this repository for:
 
-- research background;
-- scenario analysis;
-- primitive coverage exploration;
-- conceptual evaluation.
+* research background;
+* scenario analysis;
+* primitive coverage exploration;
+* conceptual evaluation.
+
+For historical context and source precedence, see [Version Relationship](docs/VERSION-RELATIONSHIP.md).
 
 ---
 
@@ -150,12 +158,12 @@ A scenario corpus can help evaluate expressive coverage.
 
 It does not prove:
 
-- protocol correctness;
-- implementation conformance;
-- legal responsibility;
-- factual causality;
-- regulatory compliance;
-- complete-log availability.
+* protocol correctness;
+* implementation conformance;
+* legal responsibility;
+* factual causality;
+* regulatory compliance;
+* complete-log availability.
 
 A paper can motivate architecture.
 
@@ -169,6 +177,8 @@ It does not replace the normative protocol drafts.
 JEP Papers and Scenario Corpus, hjs-spec, research supporting material for the JEP / HJS / JAC protocol stack.
 ```
 
+When citing an individual paper, use the authors, title, and version-specific DOI from its publication record.
+
 ---
 
 ## License and Legal Notice
@@ -177,4 +187,4 @@ Internet-Draft documents, if quoted or excerpted, are governed by the IETF Trust
 
 Research papers, corpus data, examples, and supporting files are provided under the license stated in this repository.
 
-See `NOTICE.md` for additional notes.
+See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md) for additional notes.
