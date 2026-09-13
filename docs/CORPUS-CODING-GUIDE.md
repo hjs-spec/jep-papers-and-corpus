@@ -1,66 +1,91 @@
 # Corpus Coding Guide
 
-This guide describes how to interpret the exploratory JEP scenario corpus.
+This guide describes how to interpret and annotate the exploratory JEP scenario corpus.
 
 ## Purpose
 
-The corpus is designed to test whether the four JEP primitives can describe a broad range of judgment-related situations.
+The corpus supports investigation of whether judgment-related situations can be represented using four candidate event primitives:
 
-The four primitives are:
+| Primitive | Meaning      |
+| --------- | ------------ |
+| J         | Judgment     |
+| D         | Delegation   |
+| T         | Termination  |
+| V         | Verification |
 
-| Primitive | Meaning |
-|---|---|
-| J | Judgment |
-| D | Delegation |
-| T | Termination |
-| V | Verification |
+The corpus is research material. Its annotations are not protocol events, conformance results, or evidence that the four primitives form a minimal or universally sufficient vocabulary.
 
-## What the Corpus Tests
+## What Reviewers Examine
 
-The corpus can be used to explore:
+For each scenario, reviewers may examine:
 
-- whether a scenario contains a judgment act;
-- whether authority or task delegation appears;
-- whether termination, revocation, expiry, or withdrawal appears;
-- whether verification appears;
-- whether events can be decomposed into J/D/T/V structures;
-- whether HJS receipt or evidence-lifecycle material may be relevant;
-- whether JAC declared dependency chains may be relevant.
+* whether a judgment or decision-related commitment appears;
+* whether bounded authority is delegated;
+* whether termination, revocation, expiry, or withdrawal appears;
+* whether an assessment or verification activity appears;
+* which details can be represented using J/D/T/V;
+* which details require additional context, application rules, or other representations;
+* whether HJS evidence-lifecycle material or JAC declared dependencies may be relevant.
 
-## What the Corpus Does Not Test
+A scenario does not need to contain all four primitives. Reviewers should record ambiguous or unsuccessful mappings.
 
-The corpus does not test:
+## Suggested Annotation Fields
 
-- signature validity;
-- JSON Schema validity;
-- JCS canonicalization;
-- detached JWS behavior;
-- event hash correctness;
-- implementation conformance;
-- legal liability;
-- factual truth;
-- regulatory compliance.
+The following are optional review fields, not a required corpus schema or a JEP event format.
 
-## Suggested Coding Fields
+| Field                   | What to Record                                                                           |
+| ----------------------- | ---------------------------------------------------------------------------------------- |
+| Scenario reference      | The identifier of the scenario reviewed                                                  |
+| Candidate primitives    | The proposed J/D/T/V mapping                                                             |
+| Supporting details      | The scenario text supporting each proposed mapping                                       |
+| Uncertainty             | Missing information, ambiguity, or unresolved interpretation                             |
+| Representation gaps     | Details the proposed mapping does not preserve                                           |
+| Additional dependencies | Required application rules, authority information, evidence, or companion-layer concepts |
+| Alternatives            | Simpler or competing representations, if examined                                        |
+| Review status           | Proposed, disputed, revised, or unresolved                                               |
 
-For each scenario, reviewers may optionally annotate:
+Distinguish information stated in the scenario from assumptions introduced by the reviewer.
 
-```json
-{
-  "scenario_id": "S001",
-  "contains_judgment": true,
-  "contains_delegation": true,
-  "contains_termination": false,
-  "contains_verification": true,
-  "primary_primitives": ["D", "J", "V"],
-  "possible_hjs_objects": ["behavior-record", "receipt-manifest"],
-  "possible_jac_edges": ["delegated-from", "verified-by"],
-  "notes": "Exploratory annotation only."
-}
-```
+## Three Separate Activities
 
-## Interpretation Rule
+### Semantic Annotation
 
-A scenario being expressible in J/D/T/V terms does not prove that JEP determines legal or factual outcomes.
+Identify candidate judgment, delegation, termination, and verification activities in the scenario.
 
-It only indicates that the scenario may be represented as a sequence of signed judgment-related events.
+This records an interpretation of the scenario.
+
+### Protocol Encoding
+
+Construct concrete events against a specified protocol version, including required fields and relationships.
+
+A semantic annotation alone does not establish that a valid encoding has been produced.
+
+### Technical Validation
+
+Check the encoded events using the applicable schemas, canonicalization rules, signature procedures, and conformance artifacts.
+
+The exploratory corpus does not perform these checks merely by labeling a scenario.
+
+## Interpretation Boundaries
+
+A successful mapping supports only the claim that the reviewed scenario can be represented under the stated interpretation and encoding assumptions.
+
+It does not by itself establish:
+
+* universal expressive coverage;
+* primitive minimality or uniqueness;
+* signature or event-hash validity;
+* implementation conformance;
+* factual truth or causal correctness;
+* valid authority or consent;
+* legal liability or regulatory compliance.
+
+Labeling an activity as Verification does not establish that its conclusion is correct. Recording Delegation or Termination does not itself enforce a grant, revocation, or physical action.
+
+Expressive adequacy and minimality require separate evaluation, including explicit encoding rules, independently defined scenarios, representation gaps, and fair comparisons with alternatives.
+
+## Related Guidance
+
+* [Repository README](../README.md)
+* [Version Relationship](VERSION-RELATIONSHIP.md)
+
