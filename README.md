@@ -8,27 +8,17 @@ This repository is **supporting research material**. It is not the normative JEP
 
 ## Current Protocol Context
 
-Current public version line:
+Current protocol requirements and runnable entry points are maintained centrally:
 
-| Layer   | Current Version | Repository                                               |
-| ------- | --------------- | -------------------------------------------------------- |
-| JEP     | v0.6            | [jep-v06](https://github.com/hjs-spec/jep-v06)           |
-| JEP API | v0.6            | [jep-api](https://github.com/hjs-spec/jep-api)           |
-| HJS     | v0.5            | [hjs-05](https://github.com/hjs-spec/hjs-05)             |
-| JAC     | v0.5            | [jac-agent-02](https://github.com/hjs-spec/jac-agent-02) |
+| Need | Source |
+|---|---|
+| Core specification, profiles and conformance | [JEP Core](https://github.com/hjs-spec/jep-core) — current Core 0.7 |
+| Runnable example | [Quickstart](https://github.com/hjs-spec/jep-quickstart) |
+| Implementation and delivery status | [Repository directory](https://github.com/hjs-spec/.github/blob/main/PROJECTS.md) |
+| Archive/evidence companion | [HJS public draft](https://datatracker.ietf.org/doc/draft-wang-hjs-accountability/) |
+| Declared dependency companion | [JAC public draft](https://datatracker.ietf.org/doc/draft-wang-jac/) |
 
-Public drafts:
-
-* [JEP-Core](https://datatracker.ietf.org/doc/draft-wang-jep-judgment-event-protocol/)
-* [JEP-Profiles](https://datatracker.ietf.org/doc/draft-wang-jep-profiles/)
-* [JEP-Conformance](https://datatracker.ietf.org/doc/draft-wang-jep-conformance/)
-* [HJS](https://datatracker.ietf.org/doc/draft-wang-hjs-accountability/)
-* [JAC](https://datatracker.ietf.org/doc/draft-wang-jac/)
-
-Public resources:
-
-* [JEP v0.6 Spec Demo](https://huggingface.co/spaces/yuqiangJEP/jep-v06-spec-demo/tree/main)
-* [JEP v0.6 Conformance Suite](https://huggingface.co/datasets/yuqiangJEP/jep-v06-conformance-suite)
+Paper editions and corpus records retain their original version context. The older [0.6 demo](https://huggingface.co/spaces/yuqiangJEP/jep-v06-spec-demo/tree/main) and [0.6 dataset](https://huggingface.co/datasets/yuqiangJEP/jep-v06-conformance-suite) are historical resources, not the current Core 0.7 conformance entry.
 
 ---
 
@@ -128,18 +118,7 @@ For interpretation guidance, see the [Corpus Coding Guide](docs/CORPUS-CODING-GU
 
 This repository is **not** the official conformance suite.
 
-The public dataset is maintained separately:
-
-[JEP v0.6 Conformance Suite](https://huggingface.co/datasets/yuqiangJEP/jep-v06-conformance-suite)
-
-Use that dataset for:
-
-* schemas;
-* signed vectors;
-* invalid cases;
-* canonicalization fixtures;
-* profile examples;
-* validation metadata.
+Use [Core's current conformance entry](https://github.com/hjs-spec/jep-core#validate-locally) for versioned schemas, signed/invalid vectors, canonicalization fixtures and validation metadata. The separate [0.6 dataset](https://huggingface.co/datasets/yuqiangJEP/jep-v06-conformance-suite) remains historical.
 
 Use this repository for:
 
