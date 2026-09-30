@@ -43,6 +43,10 @@ When citing a paper, identify the edition actually used and its version-specific
 
 Earlier protocol terminology, version references, and exploratory descriptions remain part of the research history.
 
+The [Core 0.6 demo](https://huggingface.co/spaces/yuqiangJEP/jep-v06-spec-demo/tree/main)
+and [Core 0.6 dataset](https://huggingface.co/datasets/yuqiangJEP/jep-v06-conformance-suite)
+retain their historical version scope. Current implementation tests start in Core’s BYOI guide.
+
 Their presence does not establish compatibility with a current implementation or specification. Any compatibility claim should identify the relevant versions and the checks performed.
 
 ## Corpus and Conformance
