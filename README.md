@@ -18,27 +18,8 @@ Current protocol requirements and runnable entry points are maintained centrally
 | Archive/evidence companion | [HJS public draft](https://datatracker.ietf.org/doc/draft-wang-hjs-accountability/) |
 | Declared dependency companion | [JAC public draft](https://datatracker.ietf.org/doc/draft-wang-jac/) |
 
-Paper editions and corpus records retain their original version context. The older [0.6 demo](https://huggingface.co/spaces/yuqiangJEP/jep-v06-spec-demo/tree/main) and [0.6 dataset](https://huggingface.co/datasets/yuqiangJEP/jep-v06-conformance-suite) are historical resources, not the current Core 0.7 conformance entry.
-
----
-
-## Repository Role
-
-This repository contains:
-
-* research papers related to judgment events, accountability receipts, and causal observability;
-* an exploratory scenario corpus for evaluating J/D/T/V primitive coverage;
-* supporting documentation for corpus interpretation and version relationships.
-
-This repository does **not** define:
-
-* JEP-Core semantics;
-* HJS receipt semantics;
-* JAC chain semantics;
-* conformance requirements;
-* legal liability;
-* factual truth;
-* governance or regulatory conclusions.
+Paper editions and corpus records retain their original version context; see
+[Version Relationship](docs/VERSION-RELATIONSHIP.md) for editions and historical resources.
 
 ---
 
@@ -116,37 +97,16 @@ For interpretation guidance, see the [Corpus Coding Guide](docs/CORPUS-CODING-GU
 
 ## Relationship to Conformance
 
-This repository is **not** the official conformance suite.
-
-Use [Core's current conformance entry](https://github.com/hjs-spec/jep-core/blob/main/docs/BYOI-CONFORMANCE.md) for versioned schemas, signed/invalid vectors, canonicalization fixtures and validation metadata. The separate [0.6 dataset](https://huggingface.co/datasets/yuqiangJEP/jep-v06-conformance-suite) remains historical.
-
-Use this repository for:
-
-* research background;
-* scenario analysis;
-* primitive coverage exploration;
-* conceptual evaluation.
-
-For historical context and source precedence, see [Version Relationship](docs/VERSION-RELATIONSHIP.md).
+For implementation tests, use [Core’s BYOI guide](https://github.com/hjs-spec/jep-core/blob/main/docs/BYOI-CONFORMANCE.md).
+For paper editions and source precedence, see [Version Relationship](docs/VERSION-RELATIONSHIP.md).
 
 ---
 
 ## Boundary Statement
 
-A scenario corpus can help evaluate expressive coverage.
-
-It does not prove:
-
-* protocol correctness;
-* implementation conformance;
-* legal responsibility;
-* factual causality;
-* regulatory compliance;
-* complete-log availability.
-
-A paper can motivate architecture.
-
-It does not replace the normative protocol drafts.
+The corpus explores expressive coverage. It does not establish protocol correctness,
+implementation conformance, factual causality or legal conclusions. Paper claims
+remain subject to the assumptions and evidence of the cited edition.
 
 ---
 
