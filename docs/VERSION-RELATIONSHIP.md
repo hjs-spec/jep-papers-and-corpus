@@ -1,6 +1,7 @@
 # Version Relationship
 
-This repository contains supporting research papers and an exploratory scenario corpus for the JEP / HJS / JAC protocol stack.
+This guide identifies the sources to use when citing papers or interpreting the
+exploratory scenario corpus.
 
 Current protocol version lines and public entry points are listed in the [repository README](../README.md#current-protocol-context).
 
@@ -39,16 +40,6 @@ PDFs stored in this repository may differ from those editions. Check the revisio
 
 When citing a paper, identify the edition actually used and its version-specific DOI. Preserve historical citations when they refer to claims or events from an earlier edition.
 
-## Historical Materials
-
-Earlier protocol terminology, version references, and exploratory descriptions remain part of the research history.
-
-The [Core 0.6 demo](https://huggingface.co/spaces/yuqiangJEP/jep-v06-spec-demo/tree/main)
-and [Core 0.6 dataset](https://huggingface.co/datasets/yuqiangJEP/jep-v06-conformance-suite)
-retain their historical version scope. Current implementation tests start in Core’s BYOI guide.
-
-Their presence does not establish compatibility with a current implementation or specification. Any compatibility claim should identify the relevant versions and the checks performed.
-
 ## Corpus and Conformance
 
 The scenario corpus is exploratory research material. It is not a protocol conformance suite and does not establish primitive minimality or universal expressive coverage.
@@ -56,4 +47,3 @@ The scenario corpus is exploratory research material. It is not a protocol confo
 For conformance artifacts, use the resources linked in the [README](../README.md#relationship-to-conformance) and check their scope against the protocol version being evaluated.
 
 Passing a particular test suite establishes only the results of the checks it performs.
-

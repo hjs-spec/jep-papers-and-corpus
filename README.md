@@ -1,6 +1,7 @@
 # JEP Papers and Scenario Corpus
 
-Research papers and an exploratory scenario corpus for the JEP / HJS / JAC protocol stack.
+Read research on verifiable event records and target determinability, or explore
+the scenario corpus.
 
 This repository is **supporting research material**. It is not the normative JEP specification, not the JEP conformance suite, and not an implementation repository.
 
@@ -15,11 +16,6 @@ Current protocol requirements and runnable entry points are maintained centrally
 | Core specification, profiles and conformance | [JEP Core](https://github.com/hjs-spec/jep-core) — current Core 0.7 |
 | Verify a signed sample | [Packaged Core example](https://github.com/hjs-spec/jep-core#verify-your-first-event) |
 | Implementation and delivery status | [Repository directory](https://github.com/hjs-spec/.github/blob/main/PROJECTS.md) |
-| Archive/evidence companion | [HJS public draft](https://datatracker.ietf.org/doc/draft-wang-hjs-accountability/) |
-| Declared dependency companion | [JAC public draft](https://datatracker.ietf.org/doc/draft-wang-jac/) |
-
-Paper editions and corpus records retain their original version context; see
-[Version Relationship](docs/VERSION-RELATIONSHIP.md) for editions and historical resources.
 
 ---
 
@@ -113,7 +109,7 @@ remain subject to the assumptions and evidence of the cited edition.
 ## Suggested Citation
 
 ```text
-JEP Papers and Scenario Corpus, hjs-spec, research supporting material for the JEP / HJS / JAC protocol stack.
+JEP Papers and Scenario Corpus, hjs-spec, research papers and exploratory scenario data.
 ```
 
 When citing an individual paper, use the authors, title, and version-specific DOI from its publication record.
